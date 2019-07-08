@@ -3,11 +3,11 @@ package com.aattri90.ds.array;
 public class Rotation {
 
   /**
-   * @param arr input array
-   * @param d rotation count
    * @question Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements
    * <b>clockwise</b>
    * @link https://www.geeksforgeeks.org/c-program-cyclically-rotate-array-one/
+   * @param arr input array
+   * @param d rotation count
    * @time-complexity O(n * d)
    */
   void rotateArrayCyclicUsingTempVar(int[] arr, int d) {
@@ -27,11 +27,11 @@ public class Rotation {
   }
 
   /**
-   * @param arr input array
-   * @param d rotation count
    * @question Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements
    * <b>clockwise</b>
    * @link https://www.geeksforgeeks.org/array-rotation/
+   * @param arr input array
+   * @param d rotation count
    * @time-complexity O(n)
    * @space-complexity O(d)
    */
@@ -50,11 +50,11 @@ public class Rotation {
   }
 
   /**
-   * @param arr input array
-   * @param d rotation count
    * @question Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements
    * <b>anti-clockwise</b>
    * @link https://www.geeksforgeeks.org/array-rotation/
+   * @param arr input array
+   * @param d rotation count
    * @time-complexity O(n)
    * @space-complexity O(1)
    */
@@ -97,11 +97,11 @@ public class Rotation {
 
 
   /**
-   * @param arr input array
-   * @param d rotation count
    * @question Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements
    * <b>anti-clockwise</b>
    * @link https://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
+   * @param arr input array
+   * @param d rotation count
    * @time-complexity O(n)
    */
   void rotateArrayAcyclicUsingSubReverse(int[] arr, int d) {
@@ -118,11 +118,11 @@ public class Rotation {
   }
 
   /**
-   * @param arr input array
-   * @param d rotation count
    * @question Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements
    * <b>clockwise</b>
    * @link https://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
+   * @param arr input array
+   * @param d rotation count
    * @time-complexity O(n)
    */
   void rotateArrayCyclicUsingSubReverse(int[] arr, int d) {
@@ -138,6 +138,12 @@ public class Rotation {
 
   }
 
+  /**
+   * This method reverses the input array between the start and end points
+   * @param arr array to be reversed
+   * @param start starting index
+   * @param end ending index
+   */
   private void reverseArray(int[] arr, int start, int end) {
 
     if (arr == null) {
@@ -153,6 +159,10 @@ public class Rotation {
     }
 
   }
+
+//  private void Search
+
+
 
 }
 
