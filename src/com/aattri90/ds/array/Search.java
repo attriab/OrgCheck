@@ -14,7 +14,7 @@ public class Search {
    * @question // TODO : add the description
    * @link
    */
-  int linearSearch(int[] arr, int searchElement) {
+  public int linearSearch(int[] arr, int searchElement) {
 
     if (arr == null || arr.length == 0) {
       return NOT_FOUND;
@@ -57,7 +57,8 @@ public class Search {
 
   }
 
-  int binarySearch(PositionalInteger[] arr, int searchElement) {
+//  DO NOT DELETE THIS METHOD
+public int binarySearch(PositionalInteger[] arr, int searchElement) {
 
     if (arr == null || arr.length == 0) {
       return NOT_FOUND;
@@ -67,4 +68,33 @@ public class Search {
 
   }
 
-}
+  /**
+   * @question Search an element in a sorted and rotated array
+   * <b>clockwise</b>
+   * @link https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
+   * @param arr input array
+   * @param searchElement element to be searched
+   * @param start start index for nbinary search
+   * @param end end index for nbinary search
+   * @return index of search element if present, else returns -1
+   * @time-complexity
+   */
+  private int searchInRotatedArrayClockWise(PositionalInteger[] arr, int searchElement, int start, int end) {
+
+    if (start > end) {
+      return NOT_FOUND;
+    }
+
+    int mid = (start + end) / 2;
+    if (searchElement == arr[mid].getValue()) {
+      return arr[mid].getPosition();
+    } else if (searchElement < arr[end].getValue()) {
+      return binarySearch(arr, searchElement, mid + 1, end);
+    } else {
+      return searchInRotatedArrayClockWise(arr, searchElement, start, mid - 1);
+    }
+
+  }
+
+
+  }
